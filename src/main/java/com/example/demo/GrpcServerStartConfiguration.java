@@ -14,7 +14,7 @@ import java.io.IOException;
 @Component
 public class GrpcServerStartConfiguration {
 
-	@PostConstruct
+	//@PostConstruct
 	public void startGrpcServer() throws IOException, InterruptedException {
 		Server server = ServerBuilder.forPort(8080)
 				.addService(new AccountController())
