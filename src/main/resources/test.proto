@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.grpc.getAccountsClasses;
+
+
+message BalanceGRpc{
+    string value = 1;
+    string precision = 2;
+    string currency =3;
+}
+message AccountGrpc{
+    string id = 1;
+    string created =2;
+    string update =3;
+    string iban = 4;
+    BalanceGRpc balance = 5;
+    string published = 6;
+    string hidden =7;
+}
+message removeAccountRequest {
+    string s = 1;
+}
+message removeAccountResponse {
+}
+message findAccountByIbanRequest {
+    string s = 1;
+}
+message findAccountByIbanResponse {
+    AccountGrpc account = 1;
+}
+message addAccountRequest {
+    AccountGrpc account = 1;
+}
+message addAccountResponse {
+    bool b = 1;
+}
+message updateAccountRequest {
+    AccountGrpc account = 1;
+}
+message updateAccountResponse {
+}
+message accountsRequest {
+}
+message accountsResponse {
+    repeated AccountGrpc accounts = 1;
+}
+service AccountService {
+    rpc removeAccount (removeAccountRequest) returns (removeAccountResponse);
+    rpc findAccountByIban (findAccountByIbanRequest) returns (findAccountByIbanResponse);
+    rpc addAccount (addAccountRequest) returns (addAccountResponse);
+    rpc updateAccount (updateAccountRequest) returns (updateAccountResponse);
+    rpc accounts (accountsRequest) returns (accountsResponse);
+}
+message AmountGRpc{
+    string value = 1;
+    string precision = 2;
+    string currency = 3;
+}
+message TurnoverGrpc{
+    string turnoverId = 1;
+    string accountIban =2;
+    string counterAccountName =3;
+    AmountGRpc amount = 4;
+    BalanceGRpc balance = 5;
+    string note = 6;
+    string description =7;
+    string specific =8;
+    string variable =9;
+}
+message removeTurnoverRequest {
+    string s = 1;
+}
+message removeTurnoverResponse {
+}
+message findTurnoverByIbanRequest {
+    string s = 1;
+}
+message findTurnoverByIbanResponse {
+    repeated TurnoverGrpc account = 1;
+}
+message addTurnoverRequest {
+    TurnoverGrpc account = 1;
+}
+message addTurnoverResponse {
+    bool b = 1;
+}
+message updateTurnoverRequest {
+    repeated TurnoverGrpc account = 1;
+}
+message updateTurnoverResponse {
+}
+message turnoversRequest {
+}
+message turnoversResponse {
+    repeated TurnoverGrpc accounts = 1;
+}
+service TurnoverService {
+    rpc removeTurnover (removeTurnoverRequest) returns (removeTurnoverResponse);
+    rpc findTurnoverByIban (findTurnoverByIbanRequest) returns (findTurnoverByIbanResponse);
+    rpc addTurnover (addTurnoverRequest) returns (addTurnoverResponse);
+    rpc updateTurnover (updateTurnoverRequest) returns (updateTurnoverResponse);
+    rpc turnovers (turnoversRequest) returns (turnoversResponse);
+}
