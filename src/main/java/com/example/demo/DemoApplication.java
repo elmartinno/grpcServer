@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 
 
-//@SpringBootApplication
+@SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
@@ -15,8 +15,6 @@ public class DemoApplication {
 		grpc.startGrpcServer();
 
 	}
-
-
 
 }
 
