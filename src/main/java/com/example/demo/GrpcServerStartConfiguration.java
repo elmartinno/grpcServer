@@ -18,8 +18,8 @@ public class GrpcServerStartConfiguration {
 	public void startGrpcServer() throws IOException, InterruptedException {
 		Server server = ServerBuilder.forPort(8080)
 				.addService(new AccountController())
-				.addService(new TurnoverController())
-				.addService(ProtoReflectionService.newInstance()) // added Reflection
+				//.addService(new TurnoverController())
+				//.addService(ProtoReflectionService.newInstance()) // added Reflection
 				.build();
 		server.start();
 		System.out.println("Started");
