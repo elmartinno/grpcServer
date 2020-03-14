@@ -9,8 +9,9 @@ import org.bson.BsonDocument;
 import org.bson.Document;
 
 public class AccountController extends AccountServiceGrpc.AccountServiceImplBase {
-    private MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
-    private MongoDatabase mongoDatabase = mongoClient.getDatabase("transparent_accounts");
+    //String uri = MongoClientURI("mongodb://localhost:27017/");
+    private MongoClient mongoClient = MongoClients.create("mongodb://user3UQ:3JllWgKjDl8MJXQx@mongodb");
+    private MongoDatabase mongoDatabase = mongoClient.getDatabase("sampledb");
     private MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("accounts");
 
     private Logs l = new Logs();
