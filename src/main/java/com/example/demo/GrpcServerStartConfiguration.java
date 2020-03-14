@@ -23,7 +23,7 @@ public class GrpcServerStartConfiguration {
 				.build();
 		server.start();
 		System.out.println("Started");
-/*
+
 		// Shutdown: Using Runtime shutdown server [Imp: before await Termination]
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 			System.out.println("Received Shutdown Request");
@@ -31,6 +31,6 @@ public class GrpcServerStartConfiguration {
 			System.out.println("Successfully, Stopped Shutdown the server");
 		}));
 
-		server.awaitTermination();*/
+		server.awaitTermination();
 	}
 }
