@@ -15,7 +15,8 @@ public class DemoApplication {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		System.out.println("a");
 		//SpringApplication.run(DemoApplication.class, args);
-		//GrpcServerStartConfiguration grpc = new GrpcServerStartConfiguration();
+		GrpcServerStartConfiguration grpc = new GrpcServerStartConfiguration();
+		System.out.println("b");
 		//grpc.startGrpcServer();
 //		Server server = ServerBuilder.forPort(8050)
 //				.addService(new AccountController())
