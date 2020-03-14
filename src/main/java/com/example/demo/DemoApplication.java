@@ -17,7 +17,7 @@ public class DemoApplication {
 		//SpringApplication.run(DemoApplication.class, args);
 		GrpcServerStartConfiguration grpc = new GrpcServerStartConfiguration();
 		System.out.println("b");
-		//grpc.startGrpcServer();
+		grpc.startGrpcServer();
 //		Server server = ServerBuilder.forPort(8050)
 //				.addService(new AccountController())
 //				//.addService(new TurnoverController())
