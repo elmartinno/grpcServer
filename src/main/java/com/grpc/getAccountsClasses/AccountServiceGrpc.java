@@ -200,7 +200,7 @@ public final class AccountServiceGrpc {
 
   /**
    */
-  public static abstract class AccountServiceImplBase implements io.grpc.BindableService {
+  public static abstract class AccountServiceImplBase implements BindableService {
 
     /**
      */
