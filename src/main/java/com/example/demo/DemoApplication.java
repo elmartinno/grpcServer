@@ -9,10 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.demo.GrpcServerStartConfiguration;
 import java.io.IOException;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
+		System.out.println("a");
 		//SpringApplication.run(DemoApplication.class, args);
 		//GrpcServerStartConfiguration grpc = new GrpcServerStartConfiguration();
 		//grpc.startGrpcServer();
