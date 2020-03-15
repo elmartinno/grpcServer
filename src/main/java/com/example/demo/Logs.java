@@ -1,13 +1,13 @@
 package com.example.demo;
 
-import org.springframework.stereotype.Service;
+//import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-@Service
+//@Service
 public class Logs {
     Logger logger = Logger.getLogger("MyLog");
     FileHandler fh;

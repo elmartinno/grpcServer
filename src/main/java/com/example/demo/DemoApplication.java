@@ -5,7 +5,7 @@ import com.example.demo.Controllers.AccountController;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.BindableService;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.demo.GrpcServerStartConfiguration;
 import java.io.IOException;
 
