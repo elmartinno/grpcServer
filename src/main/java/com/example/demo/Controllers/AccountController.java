@@ -9,8 +9,7 @@ import org.bson.BsonDocument;
 import org.bson.Document;
 
 public class AccountController extends AccountServiceGrpc.AccountServiceImplBase {
-    //String uri = MongoClientURI("mongodb://localhost:27017/");
-    private MongoClient mongoClient = MongoClients.create("mongodb://user3UQ:3JllWgKjDl8MJXQx@mongodb");
+    private MongoClient mongoClient = MongoClients.create("mongodb://user3UQ:3JllWgKjDl8MJXQx@mongodb/sampledb");
     private MongoDatabase mongoDatabase = mongoClient.getDatabase("sampledb");
     private MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("accounts");
 
