@@ -11,8 +11,8 @@ import org.bson.Document;
 import java.util.ArrayList;
 
 public class TurnoverController extends TurnoverServiceGrpc.TurnoverServiceImplBase {
-    private MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
-    private MongoDatabase mongoDatabase = mongoClient.getDatabase("transparent_accounts");
+    private MongoClient mongoClient = MongoClients.create("mongodb://user3UQ:3JllWgKjDl8MJXQx@mongodb");
+    private MongoDatabase mongoDatabase = mongoClient.getDatabase("sampledb");
     private MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("turnovers");
 
     private Logs l = new Logs();
