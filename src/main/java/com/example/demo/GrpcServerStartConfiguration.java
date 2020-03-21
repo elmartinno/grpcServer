@@ -16,7 +16,7 @@ public class GrpcServerStartConfiguration {
 
 	//@PostConstruct
 	public void startGrpcServer() throws IOException, InterruptedException {
-		Server server = ServerBuilder.forPort(9111)
+		Server server = ServerBuilder.forPort(80)
 				.addService(new AccountController())
 				.addService(new TurnoverController())
 				.addService(ProtoReflectionService.newInstance()) // added Reflection
