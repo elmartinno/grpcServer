@@ -5,6 +5,7 @@ import com.example.demo.Controllers.TurnoverController;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.protobuf.services.ProtoReflectionService;
+import io.grpc.testing.TlsTesting;
 //import org.springframework.boot.SpringApplication;
 //import org.springframework.stereotype.Component;
 
@@ -17,6 +18,9 @@ public class GrpcServerStartConfiguration {
 	//@PostConstruct
 	public void startGrpcServer() throws IOException, InterruptedException {
 		Server server = ServerBuilder.forPort(9111)
+				.useTransportSecurity(
+						TlsTesting.loadCert("server1.pem"),
+						TlsTesting.loadCert("server1.key"))
 				.addService(new AccountController())
 				.addService(new TurnoverController())
 				.addService(ProtoReflectionService.newInstance()) // added Reflection
