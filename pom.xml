@@ -27,11 +27,11 @@
 			<optional>true</optional>
 			<version>1.18.12</version>
 		</dependency>
-		<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java-util</artifactId>
-			<version>3.11.4</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.google.protobuf</groupId>-->
+<!--			<artifactId>protobuf-java-util</artifactId>-->
+<!--			<version>3.11.4</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
@@ -43,20 +43,25 @@
 <!--			<artifactId>shadow</artifactId>-->
 <!--			<version>2.0.1</version>-->
 <!--		</dependency>-->
-		<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>3.11.4</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.google.protobuf</groupId>-->
+<!--			<artifactId>protobuf-java</artifactId>-->
+<!--			<version>3.11.4</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>io.grpc</groupId>
 			<artifactId>grpc-netty-shaded</artifactId>
-			<version>1.27.1</version>
+			<version>1.28.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.grpc</groupId>
 			<artifactId>grpc-services</artifactId>
-			<version>1.27.1</version>
+			<version>1.28.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-stub</artifactId>
+			<version>1.28.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>

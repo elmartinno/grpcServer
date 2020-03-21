@@ -15,6 +15,7 @@ public class TurnoverController extends TurnoverServiceGrpc.TurnoverServiceImplB
     private MongoDatabase mongoDatabase = mongoClient.getDatabase("sampledb");
     private MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("turnovers");
 
+
     private Logs l = new Logs();
 
     @Override
