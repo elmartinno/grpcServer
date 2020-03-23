@@ -17,7 +17,7 @@ public class GrpcServerStartConfiguration {
 
 	//@PostConstruct
 	public void startGrpcServer() throws IOException, InterruptedException {
-		Server server = ServerBuilder.forPort(9111)
+		Server server = ServerBuilder.forPort(31111)
 				.useTransportSecurity(
 						TlsTesting.loadCert("server1.pem"),
 						TlsTesting.loadCert("server1.key"))
