@@ -23,7 +23,7 @@ public class GrpcServerStartConfiguration {
 						TlsTesting.loadCert("server1.key"))
 				.addService(new AccountController())
 				.addService(new TurnoverController())
-				.addService(ProtoReflectionService.newInstance()) // added Reflection
+//				.addService(ProtoReflectionService.newInstance()) // added Reflection
 				.build();
 		server.start();
 		System.out.println("Started");
