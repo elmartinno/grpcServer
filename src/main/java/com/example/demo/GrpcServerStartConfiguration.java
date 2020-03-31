@@ -18,12 +18,12 @@ public class GrpcServerStartConfiguration {
 	//@PostConstruct
 	public void startGrpcServer() throws IOException, InterruptedException {
 		Server server = ServerBuilder.forPort(31111)
-				.useTransportSecurity(
-						TlsTesting.loadCert("server1.pem"),
-						TlsTesting.loadCert("server1.key"))
+//				.useTransportSecurity(
+//						TlsTesting.loadCert("server1.pem"),
+//						TlsTesting.loadCert("server1.key"))
 				.addService(new AccountController())
 				.addService(new TurnoverController())
-				.addService(ProtoReflectionService.newInstance()) // added Reflection
+//				.addService(ProtoReflectionService.newInstance()) // added Reflection
 				.build();
 		server.start();
 		System.out.println("Started");
